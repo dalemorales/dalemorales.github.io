@@ -3,70 +3,166 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Website</title>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet">
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Oswald', sans-serif;
             margin: 0;
             padding: 0;
+            box-sizing: border-box;
             background-color: #f4f4f4;
+            display: flex;
+            flex-direction: column;
+            color: black;
         }
 
         header {
             background-color: #333;
             color: white;
-            padding: 1em;
             text-align: center;
         }
 
-        main {
-            padding: 1em;
+        .buttons {
+            background-color: #666;
+            padding: 0.5em;
+            text-align: center;
+        }
+
+        .containers {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        
+        .projects, .resume {
+            font-family: 'Abril Fatface';
+            font-weight: 100;
+            font-size: xx-large;
+            margin-bottom: 10px;
+        }
+
+        .image-container {
+            cursor: pointer;
+            transition: transform 0.2s ease-in-out;
+            margin: 20px;
+            overflow: hidden;
+            border-radius: 10px;
+            display: inline-block; 
+        }
+
+        .image-container img {
+            width: 50%;
+            height: auto;
+            object-fit: cover;
+        }
+
+        .image-container:hover {
+            transform: scale(1.1);
+        }
+
+        .doc-section {
+            display: flex;
+            
+        }
+
+        .doc-project , .doc-resume {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .image {
+            height: 400px!important;
+            width: 400px!important;
+            object-fit: contain!important;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: white;
+            margin: 0 1em;
+            font-weight: bold;
+        }
+
+        #mywebsite {
+            text-decoration: none;
+            color: white;
+            margin-bottom: 0%;
+        }
+
+        h2 {
+            font-family: 'Spotlight-mL4r5';
+            text-align: center;
+            font-size: 30px;
+            margin-bottom: 0%;
+        }
+
+        @font-face {
+        font-family: 'Spotlight-mL4r5';
+        src: url('Spotlight-mL4r5.ttf') format('truetype');
+        font-weight: normal;
+        font-style: normal;
+        }
+        
+        .cpe {
+            font-size: larger;
+            font-family: 'Spotlight-mL4r5';
+        }
+
+        section {
+            padding: 20px;
             text-align: center;
         }
 
         footer {
             background-color: #333;
             color: white;
-            padding: 1em;
             text-align: center;
-        }
-
-        .dale {
-            text-decoration: none;
-            color: black;
-            margin-left: 20px;
-        }
-
-        .welcome-title {
-            color: red;
-        }
-
-        #example {
-            color: blue;
+            padding: 1em;
+            position: relative;
+            width: 100%;
+            margin-top: auto;
         }
     </style>
-
-
+    <title>Personal Website</title>
 </head>
 <body>
 
     <header>
-        <h1 id="example">Dale Morales</h1>
-
+        <h1><a id="mywebsite" href="index.html">Dale Morales</a></h1>
+        <p class="cpe">Computer Engineer</p>
     </header>
 
-    <main> 
-        <h2 class="welcome-title" >Welcome to my Website!</h2>
-        <p id="example">This is a simple example of an HTML web page.</p>
-    </main>
+    <nav class="buttons">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+    </nav>
 
-    <div>
-        <a class="dale" href="www.youtube.com" target="_blank"> Click Here
+    <h2>Empowering Beginners: Turning Curiosity into Front-End Creativity</h2>
+
+    <section class="containers">
+    <div class="doc-section">
+        <div class="doc-project">
+        <p class="projects">Projects</p>
+        <a class="image-container" href="myproject.pdf" target="_blank">
+            <img class="image" src="project1.png" alt="Project">
         </a>
+        </div>
+        <div class="doc-resume">
+            <p class="resume">Resume</p>
+            <a class="image-container" href="myresume.pdf" target="_blank">
+                <img class="image" src="myresume.jpg" alt="Resume">
+            </a>
+        </div>
     </div>
+    </section>
 
     <footer>
-        <p>&copy; 2023 Dale Morales. All rights reserved.</p>
+        &copy; 2023 Dale Morales
     </footer>
 
 </body>
